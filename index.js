@@ -46,7 +46,16 @@ async function getAllUsers() {
               event.event_properties.veileder_kontakt ?? ""
             },${event.event_properties.veileder_respekt ?? ""},${
               event.event_properties.veileder_tillit ?? ""
-            },${event.event_properties.mange_kanaler ?? ""},${
+            },${event.event_properties.mange_kanaler ?? ""
+            },${event.event_properties.meldingstjeneste_service ?? ""},${
+              event.event_time ?? ""
+            },${event.event_properties.meldingstjeneste_kontakt ?? ""},${
+              event.event_time ?? ""
+             },${event.event_properties.meldingstjeneste_rettferdig ?? ""},${
+              event.event_time ?? ""
+            },${event.event_properties.meldingstjenesten_bryr_seg ?? ""},${
+              event.event_time ?? ""
+            },${event.event_properties.versjon ?? "1"},${
               event.event_time ?? ""
             }\n`;
             csv = csv + csvLine;
