@@ -10,7 +10,7 @@ const userActivityUrl = "https://reops-proxy.intern.nav.no/amplitude/api/2/usera
 
 async function getAllUsers() {
   const csvHeader =
-    "amplitudeId,veileder_lang_tid,sosialtjeneste_flaks,veileder_riktig_mange_kanaler,veileder_antall,veileder_riktig,veileder_service,sosialtjeneste_rettferdig,sprak,veileder_initiativ,veileder_snakker,veileder_kontakt,veileder_respekt,veileder_tillit,mange_kanaler,meldingstjeneste_service,meldingstjeneste_kontakt, meldingstjeneste_rettferdig, meldingstjeneste_bryr_seg,event_time\n";
+    "amplitudeId,veileder_lang_tid,sosialtjeneste_flaks,veileder_riktig_mange_kanaler,veileder_antall,veileder_riktig,veileder_service,sosialtjeneste_rettferdig,sprak,veileder_initiativ,veileder_snakker,veileder_kontakt,veileder_respekt,veileder_tillit,mange_kanaler,meldingstjeneste_service,meldingstjeneste_kontakt, meldingstjeneste_rettferdig, meldingstjeneste_bryr_seg, versjon, event_time\n";
 
   let csv = csvHeader;
 
