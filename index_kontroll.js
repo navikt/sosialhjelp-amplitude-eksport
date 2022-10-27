@@ -4,7 +4,8 @@ import fs from "fs";
 
 const amplitudeIds = [];
 
-const userActivityUrl = "https://amplitude.com/api/2/useractivity?user=";
+
+const userActivityUrl = "https://reops-proxy.intern.nav.no/amplitude/api/2/useractivity?user=";
 
 const API_KEY = process.env.API_KEY;
 const SECRET_KEY = process.env.SECRET_KEY;
