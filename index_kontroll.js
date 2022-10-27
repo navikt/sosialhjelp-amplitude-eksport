@@ -4,13 +4,8 @@ import fs from "fs";
 
 const amplitudeIds = [];
 
-const userActivityUrl = "https://amplitude.com/api/2/useractivity?user=";
 
-const API_KEY = process.env.API_KEY;
-const SECRET_KEY = process.env.SECRET_KEY;
-
-const buff = Buffer.from(`${API_KEY}:${SECRET_KEY}`, "utf-8");
-const base64 = buff.toString("base64");
+const userActivityUrl = "https://reops-proxy.intern.nav.no/amplitude/api/2/useractivity?user=";
 
 async function getAllUsers() {
   const csvHeader =
@@ -20,11 +15,7 @@ async function getAllUsers() {
 
   for (const amplitudeId of amplitudeIds) {
     console.log("amplitudeId", amplitudeId);
-    await fetch(`${userActivityUrl}${amplitudeId}`, {
-      headers: {
-        Authorization: "Basic " + base64,
-      },
-    })
+    await fetch(`${userActivityUrl}${amplitudeId}`)
       .then((response) => response.json())
       .then((json) => {
         json.events
