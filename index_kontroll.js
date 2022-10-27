@@ -7,12 +7,6 @@ const amplitudeIds = [];
 
 const userActivityUrl = "https://reops-proxy.intern.nav.no/amplitude/api/2/useractivity?user=";
 
-const API_KEY = process.env.API_KEY;
-const SECRET_KEY = process.env.SECRET_KEY;
-
-const buff = Buffer.from(`${API_KEY}:${SECRET_KEY}`, "utf-8");
-const base64 = buff.toString("base64");
-
 async function getAllUsers() {
   const csvHeader =
     "amplitudeId,veileder_lang_tid,sosialtjeneste_flaks,veileder_riktig_mange_kanaler,veileder_antall,veileder_riktig,veileder_service,sosialtjeneste_rettferdig,sprak,veileder_initiativ,veileder_snakker,veileder_kontakt,veileder_respekt,veileder_tillit,mange_kanaler,event_time\n";
@@ -21,11 +15,7 @@ async function getAllUsers() {
 
   for (const amplitudeId of amplitudeIds) {
     console.log("amplitudeId", amplitudeId);
-    await fetch(`${userActivityUrl}${amplitudeId}`, {
-      headers: {
-        Authorization: "Basic " + base64,
-      },
-    })
+    await fetch(`${userActivityUrl}${amplitudeId}`)
       .then((response) => response.json())
       .then((json) => {
         json.events
