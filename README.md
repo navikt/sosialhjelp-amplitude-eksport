@@ -1,3 +1,5 @@
+NB: Repoet er arkivert da vi ikke lenger har aktiv dialogtjeneste og spørreundersøkelse
+
 # Eksport av data fra spørreundersøkelse i Amplitude
 
 Dette er et repo med kode for automatisk eksport av user-events for spørreundersøkelse gjort i Amplitude.
@@ -9,3 +11,4 @@ Du må også ha en API_KEY og en SECRET_KEY som du legger inn i en `.env`-fil. K
 Dataene blir eksportert til en egen kommaseparert fil (csv).
 
 Koden kjøres med `node index.js` for spørreundersøkelsen og `node index_kontroll.js` for kontrollgruppen.
+
